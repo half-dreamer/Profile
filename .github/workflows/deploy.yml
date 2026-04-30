@@ -34,6 +34,8 @@ jobs:
         run: npx playwright install chromium
 
       - name: Run build
+        env:
+          VITE_BASE_PATH: /Profile/
         run: npm run build
 
       - name: Run unit tests
