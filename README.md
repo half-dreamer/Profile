@@ -17,27 +17,32 @@
 - `TEST_PLAN.md`：测试文档（测试范围、用例、通过标准）
 - `README.md`：本说明文件
 
-## 当前代码文件（初始版本）
+## 当前代码文件（已工程化）
 
-- `index.html`
-- `styles.css`
-- `script.js`
-
-> 后续将按开发计划扩展为 `about.html`、`learning.html`、`life.html` 等多页面结构。
+- 页面入口：`index.html`、`about.html`、`learning.html`、`life.html`
+- 页面逻辑：`src/js/pages/*.ts`
+- 渲染器：`src/js/renderers/*.ts`
+- 配置文件：`src/config/*.ts`
+- 配置校验：`src/js/validators/configValidator.ts`
+- E2E：`tests/e2e/smoke.spec.ts`
+- E2E 配置：`playwright.config.ts`
+- CI/CD：`.github/workflows/deploy.yml`
 
 ## 运行方式
 
-1. 打开项目目录
-2. 双击 `index.html` 在浏览器预览
-3. 修改页面内容后刷新浏览器查看变化
+1. 安装依赖：`npm install`
+2. 本地开发：`npm run dev`
+3. 单元测试：`npm run test`
+4. 冒烟 E2E（推荐单命令）：`npm run test:e2e`
+5. 构建产物：`npm run build`
 
-## GitHub Pages 发布（目标流程）
+## GitHub Pages 发布（自动化流程）
 
-1. 新建 GitHub 仓库并推送代码
-2. 打开仓库 `Settings` -> `Pages`
-3. `Source` 选择 `Deploy from a branch`
-4. 选择 `main` 分支与根目录 `/root`
-5. 保存后等待部署完成，访问生成的公开 URL
+1. 推送到 `main` 分支后，GitHub Actions 自动执行：
+   - build job：`npm run build` + `npm run test` + `npm run test:e2e`
+   - deploy job：发布 `dist` 到 GitHub Pages
+2. 在仓库 `Settings -> Pages` 确认来源为 `GitHub Actions`
+3. 线上访问地址（占位）：`https://<your-github-username>.github.io/<your-repo-name>/`
 
 ## 维护建议
 
