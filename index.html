@@ -3,77 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我的个人主页</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>个人主页 - 页面索引</title>
   </head>
   <body>
-    <header class="hero">
-      <div class="container hero-content">
-        <div>
-          <p class="tag">Hello, I am</p>
-          <h1 id="name">你的名字</h1>
-          <p id="intro" class="intro">
-            一句话介绍你自己：比如“我是一名热爱设计与编程的学生”。
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#projects">查看项目</a>
-            <a class="btn btn-outline" href="#contact">联系我</a>
-          </div>
-        </div>
-        <div class="avatar-wrap">
-          <div class="avatar">🙂</div>
-        </div>
-      </div>
+    <header>
+      <h1>个人主页</h1>
+      <p>这是默认入口页，请选择你要访问的页面。</p>
     </header>
-
-    <main class="container">
-      <section class="card">
-        <h2>关于我</h2>
-        <p>
-          这里写你的详细介绍：你喜欢做什么、擅长什么、未来想做什么。
-          保持真诚、简洁，别人会更容易记住你。
-        </p>
-      </section>
-
-      <section class="card">
-        <h2>技能</h2>
-        <ul class="skills">
-          <li>产品思考</li>
-          <li>网页设计</li>
-          <li>前端开发</li>
-          <li>问题解决</li>
+    <main>
+      <nav aria-label="页面导航">
+        <ul>
+          <li><a href="./about.html">关于我</a></li>
+          <li><a href="./learning.html">学习文章</a></li>
+          <li><a href="./life.html">生活记录</a></li>
         </ul>
-      </section>
-
-      <section id="projects" class="card">
-        <h2>项目展示</h2>
-        <div class="project-grid">
-          <article class="project">
-            <h3>项目 A</h3>
-            <p>简短描述这个项目解决了什么问题。</p>
-          </article>
-          <article class="project">
-            <h3>项目 B</h3>
-            <p>简短描述这个项目的亮点和成果。</p>
-          </article>
-          <article class="project">
-            <h3>项目 C</h3>
-            <p>简短描述你在项目中负责的部分。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>联系我</h2>
-        <p>邮箱：your-email@example.com</p>
-        <p>GitHub：github.com/your-name</p>
-      </section>
+      </nav>
     </main>
-
-    <footer class="footer">
-      <p>© <span id="year"></span> 你的名字. All rights reserved.</p>
-    </footer>
-
-    <script src="./script.js"></script>
   </body>
 </html>

@@ -62,3 +62,18 @@
 - P0、P1 缺陷全部修复
 - 核心流程（访问页面 -> 浏览内容 -> 点击链接）全部通过
 - GitHub Pages 线上地址可稳定访问
+
+## 7. 执行记录（Task 9）
+
+- 执行时间：2026-04-30
+- 执行命令：`npm run test:e2e`
+- 冒烟覆盖：
+  - 页面访问：`/about.html`、`/learning.html`、`/life.html`
+  - 导航互跳：about -> learning -> life
+  - 关键链接：知乎主页链接、文章有效外链、无效外链兜底文案
+- 结果记录：
+  - e2e 前置安装：通过（`test:e2e` 内已执行 `test:e2e:setup`）
+  - e2e smoke：通过（3 passed）
+- 失败与修复：
+  - 本次执行无失败，无需额外修复命令
+- 线上回归：待 GitHub Pages URL 生成后补充最终访问记录
