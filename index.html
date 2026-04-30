@@ -3,21 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>个人主页 - 页面索引</title>
+    <title>张宇｜个人主页</title>
   </head>
   <body>
     <header>
-      <h1>个人主页</h1>
-      <p>这是默认入口页，请选择你要访问的页面。</p>
+      <h1>张宇｜个人主页</h1>
+      <p>Java 开发工程师（1YOE）｜后端工程化与智能检索系统</p>
+      <nav aria-label="主导航" id="home-nav"></nav>
     </header>
     <main>
-      <nav aria-label="页面导航">
-        <ul>
-          <li><a href="./about.html">关于我</a></li>
-          <li><a href="./learning.html">学习文章</a></li>
-          <li><a href="./life.html">生活记录</a></li>
-        </ul>
-      </nav>
+      <section class="timeline-item">
+        <h2>核心信息</h2>
+        <p><strong>电话：</strong>+86 15267755291</p>
+        <p><strong>邮箱：</strong>zy1319097537@gmail.com</p>
+        <p><strong>GitHub：</strong><a href="https://github.com/half-dreamer" target="_blank" rel="noreferrer">github.com/half-dreamer</a></p>
+        <p><strong>知乎：</strong><a href="https://www.zhihu.com/people/half-dreamer" target="_blank" rel="noreferrer">half-dreamer</a></p>
+      </section>
+
+      <section class="timeline-section" id="home-highlights"></section>
     </main>
+    <script type="module" src="./src/js/pages/index.ts"></script>
   </body>
 </html>
