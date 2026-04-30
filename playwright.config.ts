@@ -2,15 +2,15 @@ import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
   testDir: "tests/e2e",
-  timeout: 30_000,
+  timeout: 60_000,
   use: {
-    baseURL: "http://127.0.0.1:5173",
+    baseURL: "http://127.0.0.1:4173",
     headless: true
   },
   webServer: {
-    command: "npm run dev -- --host 127.0.0.1 --port 5173",
-    url: "http://127.0.0.1:5173/about.html",
-    reuseExistingServer: true,
-    timeout: 60_000
+    command: "npm run build && npx vite preview --host 127.0.0.1 --port 4173",
+    url: "http://127.0.0.1:4173/about.html",
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000
   }
 });
